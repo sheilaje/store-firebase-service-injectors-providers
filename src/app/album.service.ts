@@ -31,4 +31,9 @@ export class AlbumService {
                                 artist: localUpdatedAlbum.artist,
                                 description: localUpdatedAlbum.description});
   }
+
+  deleteAlbum(localAlbumToDelete){
+    let albumEntryInFirebase = this.getAlbumById(localAlbumToDelete.$key);
+    albumEntryInFirebase.remove();
+  }
 }
