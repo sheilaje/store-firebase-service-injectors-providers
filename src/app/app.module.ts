@@ -18,6 +18,7 @@ import { AlbumComponent } from './album/album.component';
 import { TshirtComponent } from './tshirt/tshirt.component';
 import { EditTshirtComponent } from './edit-tshirt/edit-tshirt.component';
 import { TshirtDetailComponent } from './tshirt-detail/tshirt-detail.component';
+import { AngularFireAuthModule } from 'angularfire2/auth'
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -46,7 +47,8 @@ export const firebaseConfig = {
     AppRoutingModule,
     routing,
     AngularFireModule.initializeApp(firebaseConfig),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    AngularFireAuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]
