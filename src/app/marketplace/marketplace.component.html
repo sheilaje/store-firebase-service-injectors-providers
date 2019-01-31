@@ -1,13 +1,2 @@
-
-
-<div *ngFor="let eachAlbum of albums | async" class="panel panel-default">
-    <div class="panel-body">
-      <h3 (click)="goToDetailPage(eachAlbum)">
-        <em>{{eachAlbum.title}}</em> by {{eachAlbum.artist}}</h3>
-        <div *ngIf="currentRoute === '/admin'">
-          {{eachAlbum.description}}
-          <hr />
-          <app-edit-album [selectedAlbum] = "eachAlbum"></app-edit-album>
-        </div>
-    </div>
-</div>
+<app-tshirt></app-tshirt>
+<app-album></app-album>

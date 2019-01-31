@@ -6,6 +6,7 @@ import { MarketplaceComponent } from './marketplace/marketplace.component';
 import { AlbumDetailComponent } from './album-detail/album-detail.component';
 import { AdminComponent }   from './admin/admin.component';
 
+
 const appRoutes: Routes = [
     {
         path: '',
@@ -26,7 +27,7 @@ const appRoutes: Routes = [
     {
         path: 'admin',
         component: AdminComponent
-    }
+    },
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);

@@ -3,26 +3,26 @@
     <h3 class="panel-title">Add New Album to Inventory</h3>
   </div>
   <div class="panel-body">
+    <table>
     <div>
-      <div>
-        <label>Album Title:</label>
-        <br>
-        <input #newTitle>
-      </div>
+      <tr>
+        <td><label>Album Title:</label></td>
+        <td><input #newTitle></td>
+      </tr>
 
-      <div>
-        <label>Album Artist:</label>
-        <br>
-        <input #newArtist>
-      </div>
+      <tr>
+        <td><label>Album Artist:</label></td>
+        <td><input #newArtist></td>
+      </tr>
 
-      <div>
-        <label>Album Description:</label>
-        <br>
-        <textarea #newDescription></textarea>
-      </div>
-      <button (click) = "submitForm(newTitle.value, newArtist.value, newDescription.value)"> Add </button>
+      <tr>
+        <td><label>Album Description:</label></td>
+        <td><textarea #newDescription></textarea></td>
+      </tr>
+
+      <tr><td></td><td><button (click) = "submitForm(newTitle.value, newArtist.value, newDescription.value)"> Add </button></td></tr>
     </div>
+  </table>
   </div>
 </div>
 

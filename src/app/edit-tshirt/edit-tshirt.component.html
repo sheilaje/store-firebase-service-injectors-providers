@@ -1,0 +1,32 @@
+<button (click) = "editSpecificTshirt()">Edit</button>
+<div *ngIf="this.editTshirt">
+  <table>
+    <tr>
+      <td><label>New Tshirt brand:</label></td>
+      <td><input [(ngModel)]="selectedTshirt.brand"></td>
+    </tr>
+    <tr>
+      <td><label>New Tshirt size:</label></td>
+      <td><input [(ngModel)]="selectedTshirt.size"></td>
+    </tr>
+    <tr>
+      <td><label>New Tshirt price:</label></td>
+      <td><input [(ngModel)]="selectedTshirt.price"></td>
+    </tr>
+    <tr>
+      <td><label>New Tshirt color:</label></td>
+      <td><input [(ngModel)]="selectedTshirt.color"></td>
+    </tr>
+  <hr>
+    <tr>
+      <td>
+        <button (click) = "beginUpdatingTshirt(selectedTshirt)"> update
+        </button>
+      </td>
+      <td>
+        <button  (click) = "beginDeletingTshirt(selectedTshirt)"> Delete </button>
+      </td>
+    </tr>
+  </table>
+  <hr>
+</div>

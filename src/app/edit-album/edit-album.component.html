@@ -1,16 +1,26 @@
-<h4>Edit Album</h4>
+<button (click) = "editSpecificAlbum()">Edit</button>
+<div *ngIf="this.editAlbum">
+<table>
+  <tr>
+    <td><label>New Album Title:</label></td>
+    <td><input [(ngModel)]="selectedAlbum.title"></td>
+  </tr>
 
-<label>New Album Title:</label>
-<input [(ngModel)]="selectedAlbum.title">
-<br>
+  <tr>
+    <td><label>New Album Artist:</label></td>
+    <td><input [(ngModel)]="selectedAlbum.artist"></td>
+  </tr>
 
-<label>New Album Artist:</label>
-<input [(ngModel)]="selectedAlbum.artist">
-<br>
+<tr>
+<td><label>New Album Description:</label></td>
+<td><input [(ngModel)]="selectedAlbum.description"></td>
+</tr>
 
-<label>New Album Description:</label>
-<input [(ngModel)]="selectedAlbum.description">
-
-<button (click) = "beginUpdatingAlbum(selectedAlbum)"> update </button>
 <hr>
-<button  (click) = "beginDeletingAlbum(selectedAlbum)"> Delete </button>
+<tr>
+  <td><button (click) = "beginUpdatingAlbum(selectedAlbum)"> update </button></td>
+<td><button  (click) = "beginDeletingAlbum(selectedAlbum)"> Delete </button></td>
+</tr>
+</table>
+<hr>
+</div>

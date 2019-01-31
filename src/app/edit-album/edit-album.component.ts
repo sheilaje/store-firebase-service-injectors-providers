@@ -10,6 +10,7 @@ import { AlbumService } from '../album.service';
 })
 export class EditAlbumComponent implements OnInit {
   @Input() selectedAlbum;
+  editAlbum = null;
 
   constructor(private albumService: AlbumService) { }
 
@@ -24,6 +25,10 @@ export class EditAlbumComponent implements OnInit {
     if(confirm("Are you sure you want to delete this item from the inventory?")){
       this.albumService.deleteAlbum(albumToDelete);
     }
+  }
+
+  editSpecificAlbum(){
+    this.editAlbum = "true";
   }
 
 }
