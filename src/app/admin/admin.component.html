@@ -26,6 +26,39 @@
   </div>
 </div>
 
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Add New Tshirt to Inventory</h3>
+  </div>
+  <div class="panel-body">
+    <table>
+    <div>
+      <tr>
+        <td><label>Tshirt Brand:</label></td>
+        <td><input #newBrand></td>
+      </tr>
+
+      <tr>
+        <td><label>Tshirt Color:</label></td>
+        <td><input #newColor></td>
+      </tr>
+
+      <tr>
+        <td><label>Tshirt Size:</label></td>
+        <td><textarea #newSize></textarea></td>
+      </tr>
+
+      <tr>
+        <td><label>Tshirt Price:</label></td>
+        <td><textarea #newPrice></textarea></td>
+      </tr>
+
+      <tr><td></td><td><button (click) = "submitTshirtForm(newBrand.value, newColor.value, newSize.value, newPrice.value)"> Add </button></td></tr>
+    </div>
+  </table>
+  </div>
+</div>
+
 <div>
   <app-marketplace></app-marketplace>
 </div>

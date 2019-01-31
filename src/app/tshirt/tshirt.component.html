@@ -1,9 +1,9 @@
 <div *ngFor="let eachTshirt of tshirts | async" class="panel panel-default">
     <div class="panel-body">
       <h3 (click)="goToDetailPage(eachTshirt)">
-        <em>{{eachTshirt.brand}}</em> <p> {{eachTshirt.price}}</p></h3>
+        <em>{{eachTshirt.brand}}</em> {{eachTshirt.size}} <p> </p></h3>
         <div *ngIf="currentRoute === '/admin'">
-          {{eachTshirt.size}}
+          {{eachTshirt.price | currency }}
           <hr />
           <app-edit-tshirt [selectedTshirt] = "eachTshirt"></app-edit-tshirt>
         </div>
